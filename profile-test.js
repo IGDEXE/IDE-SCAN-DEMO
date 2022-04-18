@@ -34,7 +34,7 @@ var state = {
 };
 
 var sutUserName = "user1";
-var sutUserPassword = "User1_123desfs"
+var sutUserPassword = "User1_123desfssdsd"
 
 chrome.setDefaultService(service);
 
