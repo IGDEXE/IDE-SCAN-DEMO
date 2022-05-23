@@ -34,7 +34,7 @@ var state = {
 };
 
 var sutUserName = "user1";
-var sutUserPassword = "User1_123dfdddfsd"
+var sutUserPWD = "User1_123ddsdffsd"
 
 chrome.setDefaultService(service);
 
@@ -60,7 +60,7 @@ test.before(function() {
     webDriver.get(zapTargetApp);
     webDriver.sleep(1000);
     webDriver.findElement(By.name("userName")).sendKeys(sutUserName);
-    webDriver.findElement(By.name("password")).sendKeys(sutUserPassword);
+    webDriver.findElement(By.name("password")).sendKeys(sutUserPWD);
     webDriver.sleep(1000);
     webDriver.findElement({
         tagName: "button",
@@ -186,7 +186,7 @@ test.describe(zapTargetAppRoute + " regression test suite", function() {
                 zaproxy.users.setAuthenticationCredentials(
                     contextId,
                     userId,
-                    "username=" + sutUserName + "&" + "password=" + sutUserPassword,
+                    "username=" + sutUserName + "&" + "password=" + sutUserPWD,
                     zapApiKey,
                     function(err, resp) {
                         setAuthenticationCredentialsDone(state.error);
